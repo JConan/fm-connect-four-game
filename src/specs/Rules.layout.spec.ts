@@ -1,4 +1,4 @@
-import { render, fireEvent, screen, act } from '@testing-library/svelte'
+import { render, screen } from '@testing-library/svelte'
 import Rules from '../lib/Rules.svelte'
 
 describe('Rules layout', () => {

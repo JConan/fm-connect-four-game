@@ -6,10 +6,13 @@
     };
 
     export let backgroundColor: keyof typeof colors;
-    export let href = "/#";
+    export let href = undefined;
+    export let onClick = undefined;
 </script>
 
-<a {href} style="background-color:{colors[backgroundColor]}"><slot /></a>
+<a {href} style="background-color:{colors[backgroundColor]}" on:click={onClick}
+    ><slot /></a
+>
 
 <style>
     a {
