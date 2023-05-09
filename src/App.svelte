@@ -6,12 +6,10 @@
   import PlayVsPlayer from "./lib/PlayVsPlayer.svelte";
 </script>
 
-<div class="routes">
-  <Router
-    routes={{
-      "/": Home,
-      "/rules": Rules,
-      "/play/vsplayer": PlayVsPlayer,
-    }}
-  />
-</div>
+<Router
+  routes={{
+    "/": Home,
+    "/rules": Rules,
+    "/play/vsplayer": PlayVsPlayer,
+  }}
+/>
