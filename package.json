@@ -1,0 +1,32 @@
+{
+  "name": "connect-four-game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run src",
+    "test:watch": "vitest src"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/svelte": "^3.2.2",
+    "@tsconfig/svelte": "^4.0.1",
+    "@types/jest": "^29.5.1",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "jsdom": "^22.0.0",
+    "svelte": "^3.59.1",
+    "svelte-check": "^3.3.2",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vitest": "^0.31.0"
+  },
+  "dependencies": {
+    "svelte-spa-router": "^3.3.0"
+  }
+}

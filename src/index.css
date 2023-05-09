@@ -1,0 +1,33 @@
+/* @font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    src: url('/fonts/SpaceGrotesk-Medium.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    src: url('/fonts/static/SpaceGrotesk-Bold.ttf') format('ttf');
+} */
+
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
+
+
+body {
+    font-family: 'Space Grotesk';
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    background-color: #7945ff;
+}
+
+* {
+    box-sizing: border-box;
+}
