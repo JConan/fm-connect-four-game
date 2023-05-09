@@ -1,6 +1,4 @@
 import { render, fireEvent, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/svelte'
-import {  } from 'svelte-spa-router'
-import { tick } from 'svelte'
 import App from '../App.svelte'
 
 it('should able to go to Rules Page and go back', async () => {

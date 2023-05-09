@@ -16,5 +16,6 @@
         box-shadow: 0px 10px 0px 0px #000000;
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 </style>
