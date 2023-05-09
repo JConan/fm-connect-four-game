@@ -1,10 +1,14 @@
 <script>
-    import GameRules from "./Buttons/GameRules.svelte";
+    import GameRulesBtn from "./Buttons/GameRules.svelte";
+    import PlayVsPlayerBtn from "./Buttons/PlayVsPlayer.svelte";
 </script>
 
 <div class="home-container">
-    <p>Home</p>
-    <GameRules />
+    <img width="52px" src="/images/logo.svg" alt="logo">
+    <div>
+        <PlayVsPlayerBtn />
+        <GameRulesBtn />
+    </div>
 </div>
 
 <style>
@@ -17,5 +21,15 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    img{
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 79px;
+    }
+    .home-container div {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
     }
 </style>

@@ -3,13 +3,15 @@
   import Router, { push } from "svelte-spa-router";
   import Rules from "./lib/Rules.svelte";
   import Home from "./lib/Home.svelte";
+  import PlayVsPlayer from "./lib/PlayVsPlayer.svelte";
 </script>
 
 <div class="routes">
   <Router
-  routes={{
-    "/": Home,
-    "/rules": Rules,
-  }}
-/>
+    routes={{
+      "/": Home,
+      "/rules": Rules,
+      "/play/vsplayer": PlayVsPlayer,
+    }}
+  />
 </div>
