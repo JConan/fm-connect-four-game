@@ -7,7 +7,7 @@ it('should able to go to Rules Page and go back', async () => {
     // go to Rules page
     const gameRulesBtn = await waitFor(() => screen.getByText(/Game Rules/i) as HTMLLinkElement)
     await fireEvent.click(gameRulesBtn)
-    
+
     // find checker button
     const checkerBtn = await waitFor(() => screen.getByRole('link', { name: /go home/i }) as HTMLLinkElement)
     expect(window.location.hash).toBe('#/rules')
