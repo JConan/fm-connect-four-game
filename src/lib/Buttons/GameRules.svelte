@@ -1,0 +1,1 @@
+<a href="/#/rules">GAME RULES</a>
