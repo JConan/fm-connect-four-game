@@ -2,24 +2,36 @@
     import BarButton from "./Buttons/BarButton.svelte";
 
     let dialog: HTMLDialogElement;
-    $: dialog && dialog.showModal();
+
+    // close dialog box when clicking on backdrop
+    $: dialog && dialog.addEventListener('click', (evt) => {
+        evt.target === dialog && dialog.close()
+    });
 </script>
 
+<button
+    on:click={() => {
+        dialog.showModal();
+    }}>show</button
+>
+
 <dialog bind:this={dialog}>
-    <h1>PAUSE</h1>
-    <BarButton backgroundColor="white" onClick={() => alert("continue")}>
-        <span>CONTINUE GAME</span>
-    </BarButton>
-    <BarButton backgroundColor="white" onClick={() => alert("restart")}>
-        <span>RESTART GAME</span>
-    </BarButton>
-    <BarButton backgroundColor="red" href="/#">
-        <span class="white">QUIT</span>
-    </BarButton>
+    <div class="dialog-container">
+        <h1>PAUSE</h1>
+        <BarButton backgroundColor="white" onClick={() => alert("continue")}>
+            <span>CONTINUE GAME</span>
+        </BarButton>
+        <BarButton backgroundColor="white" onClick={() => alert("restart")}>
+            <span>RESTART GAME</span>
+        </BarButton>
+        <BarButton backgroundColor="red" href="/#">
+            <span class="white">QUIT</span>
+        </BarButton>
+    </div>
 </dialog>
 
 <style>
-    dialog {
+    .dialog-container {
         height: 491px;
         width: 480px;
         border-radius: 40px;
@@ -31,6 +43,12 @@
         text-align: center;
         padding-bottom: 50px;
     }
+    dialog[open]{
+        border:none;
+        background-color: inherit;
+    }
+
+
     dialog::backdrop {
         background: rgba(0, 0, 0, 0.5);
     }
