@@ -1,14 +1,12 @@
 <script lang="ts">
     import GameMenu from "./Modals/GameMenu.svelte";
 
-    let gameMenuDialog: HTMLDialogElement;
+    let menu:GameMenu;
+    $: showMenu = ()=>{ menu && menu.show() }
 </script>
 
-<button
-    on:click={() => {
-        gameMenuDialog.showModal();
-    }}>
-    show
+<button on:click={showMenu}>
+    menu
 </button>
 
-<GameMenu bind:dialog={gameMenuDialog} />
+<GameMenu bind:this={menu} />

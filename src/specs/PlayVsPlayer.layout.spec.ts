@@ -1,29 +1,25 @@
-import { render, screen } from '@testing-library/svelte'
+import { fireEvent, render, screen } from '@testing-library/svelte'
 import PlayVsPlayer from '../lib/PlayVsPlayer.svelte'
-import { vi } from 'vitest';
-
 
 describe('Rules layout', () => {
-    beforeAll(() => {
-        /* 
-            workaround https://github.com/jsdom/jsdom/issues/3294 
-            to add support of HTMLDialogElement functions in vitest
-        */
-        HTMLDialogElement.prototype.show = vi.fn();
-        HTMLDialogElement.prototype.showModal = vi.fn();
-        HTMLDialogElement.prototype.close = vi.fn();
-    });
-
-    it("should have a button for continue the game", () => {
+    it("should have a button for continue the game", async () => {
         render(PlayVsPlayer)
         const button = screen.getByText(/continue game/i).parentElement as HTMLAnchorElement
         expect(button).not.toBeVisible()
+
+        const menu = screen.getByText(/menu/)
+        await fireEvent.click(menu)
+        expect(button).toBeVisible()
     })
 
-    it("should have a button for restarting the game", () => {
+    it("should have a button for restarting the game", async () => {
         render(PlayVsPlayer)
         const button = screen.getByText(/restart game/i).parentElement as HTMLAnchorElement
         expect(button).not.toBeVisible()
+
+        const menu = screen.getByText(/menu/)
+        await fireEvent.click(menu)
+        expect(button).toBeVisible()
     })
 
     it("should have a button to quit", async () => {
@@ -31,6 +27,10 @@ describe('Rules layout', () => {
         const button = screen.getByText(/quit/i).parentElement as HTMLAnchorElement
         expect(button.href).toMatch(/\/#$/)
         expect(button).not.toBeVisible()
+
+        const menu = screen.getByText(/menu/)
+        await fireEvent.click(menu)
+        expect(button).toBeVisible()
     })
 
 })

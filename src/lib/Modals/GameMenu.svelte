@@ -1,12 +1,35 @@
-<script lang="ts">
-    import BarButton from "../Buttons/BarButton.svelte";
-    export let dialog: HTMLDialogElement;
-
-    // close dialog box when clicking on backdrop
-    $: dialog && dialog.addEventListener("click", () => dialog.close());
+<script context="module" lang="ts">
+    export type GameMenuHandlers = {
+        show: () => void;
+        hide: () => void;
+    }
 </script>
 
-<dialog bind:this={dialog}>
+<script lang="ts">
+    import BarButton from "../Buttons/BarButton.svelte";
+    let _dialog: HTMLDialogElement;
+
+    // somehow without this attribut in dialog I could not test out visibility
+    let open=false;
+
+    // create external handlers
+    $: _show = () => { if(_dialog){
+        _dialog.showModal()
+        open=true
+    } }
+    $: _hide = () => { if(_dialog){
+        _dialog.close()
+        open=false
+    } }
+    
+    // close dialog box when clicking on backdrop
+    $: _dialog && _dialog.addEventListener("click", () => _hide());
+
+    export function show() { _show() }
+    export function hide() { _hide() }
+</script>
+
+<dialog bind:this={_dialog} {open}>
     <div class="dialog-container">
         <h1>PAUSE</h1>
         <BarButton backgroundColor="white" onClick={() => alert("continue")}>
