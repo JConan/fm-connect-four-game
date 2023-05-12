@@ -19,71 +19,101 @@
         <p>12</p>
         <img src="/images/player-one.svg" alt="player one icon" />
     </div>
+
     <div class="board" aria-label="board">
         <img src="/images/board-layer-black-large.svg" alt="board layout black" />
+        <div class="selection">
+            <ul>
+                <!-- <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                <li><img src="/images/counter-red-large.svg" alt="counter" /></li> -->
 
-        <div class="counters">
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-            </ul></div>
-            <div class="counter-row"><ul>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter"></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter"></li>
-            </ul></div>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li><img class="marker" src="/images/marker-red.svg" alt="counter" /></li>
+            </ul>
         </div>
-        <img
-        src="/images/board-layer-white-large.svg"
-        alt="board layout white"
-        />
+        <div class="counters">
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+            <div class="counter-row">
+                <ul>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
+                    <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
+                </ul>
+            </div>
+        </div>
+        <img src="/images/board-layer-white-large.svg" alt="board layout white" />
     </div>
     <div class="player">
         <p>PLAYER 2</p>
@@ -193,27 +223,53 @@
         height: 504px;
         position: absolute;
         margin-top: 16px;
-        left: calc( 50% - ( var(--width) / 2 ) );
+        left: calc(50% - (var(--width) / 2));
         display: flex;
         justify-content: space-between;
+        visibility: hidden;
     }
 
     .counter-row {
         height: 100%;
         width: 72px;
     }
-    ul{
-        height: calc( 100% - 64px );
+    ul {
+        height: calc(100% - 64px);
         list-style-type: none;
         margin-inline: unset;
         padding-inline: unset;
-        margin:0;
+        margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
-    .counters img{
+    .counters img, .selection img {
         width: 72px;
+    }
+    .selection{
+        --width: 615px;
+        width: var(--width);
+        height: 72px;
+        position: absolute;
+        left: calc(50% - (var(--width) / 2));
+        top: -40px;
+    }
+    .selection ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+
+    }
+    .selection ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .selection .marker{
+        height: 30px;
+        width: 26px;
+        margin: auto;
     }
 </style>
