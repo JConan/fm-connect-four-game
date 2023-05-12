@@ -34,6 +34,11 @@
         <p>23</p>
         <img src="/images/player-two.svg" alt="player two icon" />
     </div>
+    <div class="turn">
+        <p>PLAYER 2'S TURN</p>
+        <p>14s</p>
+        <img src="/images/turn-background-yellow.svg" alt="turn background" />
+    </div>
 </div>
 
 <GameMenu bind:this={menu} />
@@ -54,6 +59,8 @@
         height: 584px;
         width: 632px;
         border-radius: 40px;
+        z-index: -2;
+        position: relative;
     }
     .board img {
         position: absolute;
@@ -74,7 +81,7 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .player p{
+    p {
         margin: 0;
         line-height: 0;
     }
@@ -84,19 +91,43 @@
     .player img {
         position: absolute;
         top: -30px;
-        left: calc( 50% - 27px );
+        left: calc(50% - 27px);
     }
-    .container{
-        width: calc( 187px + 60px + 584px + 60px + 187px );
+    .container {
+        width: calc(187px + 60px + 632px + 60px + 187px);
+        height: 584px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        position: relative;
     }
-    .top{
+    .top {
         width: 632px;
         margin: 50px auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .turn {
+        position: absolute;
+        height: 160px;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        bottom: -120px;
+    }
+    .turn p:nth-child(2){
+        font-size: 56px;
+    }
+    .turn img {
+        position: absolute;
+        top: -0px;
+        left: 0;
+        z-index: -1;
     }
 </style>
