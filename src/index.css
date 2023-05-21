@@ -18,6 +18,16 @@
 @import url('https://fonts.cdnfonts.com/css/space-grotesk');
 
 
+:root {
+    --dark-purple: #5C2DD5;
+    --purple: #7945FF;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Space Grotesk';
     font-synthesis: none;
@@ -25,9 +35,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    background-color: #7945ff;
+    background-color: var(--dark-purple);
 }
 
-* {
-    box-sizing: border-box;
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: var(--purple);
+    }
 }
