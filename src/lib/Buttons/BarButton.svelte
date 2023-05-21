@@ -27,12 +27,17 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 31px;
-        margin: auto;
+        margin: 0;
         display: flex;
         flex-direction: column;
     }
     a:hover {
         border-color: #5c2dd5;
         box-shadow: 0px 10px 0px 0px #5c2dd5;
+    }
+    @media only screen and (max-width: 768px) {
+        a {
+            width: 335px;
+        }
     }
 </style>
