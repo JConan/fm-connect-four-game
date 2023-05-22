@@ -1,7 +1,11 @@
 <script lang="ts">
-    import GameMenu from "./Modals/GameMenu.svelte";
+    import UserSelection from "./Components/UserSelection.svelte";
+import GameMenu from "./Modals/GameMenu.svelte";
 
     let menu: GameMenu;
+    let selectIdx = 0;
+    let user;
+
     $: showMenu = () => {
         menu && menu.show();
     };
@@ -21,29 +25,11 @@
     </div>
 
     <div class="board" aria-label="board">
-        <img src="/images/board-layer-black-large.svg" alt="board layout black" />
-        <div class="selection">
-            <ul>
-                <!-- <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
-                <li><img src="/images/counter-red-large.svg" alt="counter" /></li> -->
-
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li><img class="marker" src="/images/marker-red.svg" alt="counter" /></li>
-            </ul>
-        </div>
+        <!-- <img src="/images/board-layer-black-large.svg" alt="board layout black" /> -->
+        <UserSelection index={selectIdx} {user}/>
         <div class="counters">
             <div class="counter-row">
-                <ul>
+                <ul on:mouseenter={() => { selectIdx=0; user="red" }}>
                     <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
                     <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
                     <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
@@ -53,7 +39,7 @@
                 </ul>
             </div>
             <div class="counter-row">
-                <ul>
+                <ul on:mouseenter={() => { selectIdx=1 }}>
                     <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
                     <li><img src="/images/counter-red-large.svg" alt="counter" /></li>
                     <li><img src="/images/counter-yellow-large.svg" alt="counter" /></li>
@@ -113,7 +99,7 @@
                 </ul>
             </div>
         </div>
-        <img src="/images/board-layer-white-large.svg" alt="board layout white" />
+        <!-- <img src="/images/board-layer-white-large.svg" alt="board layout white" /> -->
     </div>
     <div class="player">
         <p>PLAYER 2</p>
@@ -226,7 +212,6 @@
         left: calc(50% - (var(--width) / 2));
         display: flex;
         justify-content: space-between;
-        visibility: hidden;
     }
 
     .counter-row {
@@ -271,5 +256,9 @@
         height: 30px;
         width: 26px;
         margin: auto;
+    }
+
+    .counter-row ul{
+        background-color: lightblue;
     }
 </style>

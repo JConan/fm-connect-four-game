@@ -4,19 +4,20 @@
         yellow: "#FFCE67",
         red: "#FD6687",
     };
+    import { send, type events } from '$lib/Stores/Navigation'
 
-    export let backgroundColor: keyof typeof colors;
-    export let href = undefined;
-    export let onClick = undefined;
+
+    export let color: keyof typeof colors;
+    export let action : events;
 </script>
 
-<a {href} style="background-color:{colors[backgroundColor]}" on:click={onClick}
-    ><slot /></a
+<button style:--container-color={color} on:click={() => { send(action)  }}
+    ><slot /></button
 >
 
 <style>
-    a {
-        background-color: var(--container-background);
+    button {
+        background-color: var(--container-color);
         height: 72px;
         width: 400px;
         border-radius: 20px;
@@ -31,12 +32,12 @@
         display: flex;
         flex-direction: column;
     }
-    a:hover {
+    button:hover {
         border-color: #5c2dd5;
         box-shadow: 0px 10px 0px 0px #5c2dd5;
     }
     @media only screen and (max-width: 768px) {
-        a {
+        button {
             width: 335px;
         }
     }

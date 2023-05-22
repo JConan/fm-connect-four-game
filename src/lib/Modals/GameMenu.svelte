@@ -32,13 +32,13 @@
 <dialog bind:this={_dialog} {open}>
     <div class="dialog-container">
         <h1>PAUSE</h1>
-        <BarButton backgroundColor="white" onClick={() => alert("continue")}>
+        <BarButton color="white" action="back">
             <span>CONTINUE GAME</span>
         </BarButton>
-        <BarButton backgroundColor="white" onClick={() => alert("restart")}>
+        <BarButton color="white" action="back">
             <span>RESTART GAME</span>
         </BarButton>
-        <BarButton backgroundColor="red" href="/#">
+        <BarButton color="red" action="back">
             <span class="white">QUIT</span>
         </BarButton>
     </div>

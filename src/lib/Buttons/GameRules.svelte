@@ -2,7 +2,7 @@
     import BarButton from "./BarButton.svelte";
 </script>
 
-<BarButton href="/#/rules" backgroundColor="white">
+<BarButton color="white" action="goto: rules">
     <span>GAME RULES</span>
 </BarButton>
 

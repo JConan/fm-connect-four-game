@@ -2,7 +2,7 @@
     import BarButton from "./BarButton.svelte";
 </script>
 
-<BarButton href="/#/play/vsplayer" backgroundColor="yellow">
+<BarButton color="yellow" action="back" >
     <div>
         <span>PLAY VS PLAYER</span>
         <img
@@ -16,6 +16,7 @@
 <style>
     div {
         height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
