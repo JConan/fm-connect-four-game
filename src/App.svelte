@@ -1,10 +1,14 @@
 <script>
   import "./app.css";
+  import { state } from "./lib/Stores/Navigation";
   import Main from "$lib/Screens/Main.svelte";
+  import Rules from "$lib/Screens/Rules.svelte";
 
-  import { send, state } from './lib/Stores/Navigation'
+  const screens = {
+    menu: Main,
+    rules: Rules,
+  };
+  $: screen = screens[$state.value];
 </script>
 
-<p>current navigation state: {$state.value}</p>
-
-<Main />
+<svelte:component this={screen} />

@@ -1,5 +1,5 @@
 <script>
-    import Checker from "./Buttons/Checker.svelte";
+    import Checker from "$lib/Buttons/Checker.svelte";
 </script>
 
 <div class="rules-container">

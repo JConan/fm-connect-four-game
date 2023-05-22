@@ -1,7 +1,9 @@
 <script>
+    import { send } from "$lib/Stores/Navigation";
+
 </script>
 
-<a class="checker" href="/#" aria-label="go home">
+<a class="checker" href="/#" aria-label="go home" on:click={()=>send('back')}>
     <svg
         width="70px"
         height="75px"
