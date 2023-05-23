@@ -2,7 +2,7 @@
     import BarButton from "./BarButton.svelte";
 </script>
 
-<BarButton color="yellow" action="back" >
+<BarButton color="yellow" action="new game" >
     <div>
         <span>PLAY VS PLAYER</span>
         <img

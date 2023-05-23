@@ -7,8 +7,11 @@ const navigation = createMachine({
   "states": {
     "menu": {
       "on": {
-        "goto: rules": {
+        "show rules": {
           "target": "rules"
+        },
+        "new game":{
+          "target": "gaming"
         }
       }
     },
@@ -18,9 +21,16 @@ const navigation = createMachine({
           "target": "menu"
         }
       }
+    },
+    "gaming": {
+      "on": {
+        "back": {
+          "target": "menu"
+        }
+      }
     }
   },
-  "schema": { events: {} as { type: 'goto: rules' } | { type: 'back' } },
+  "schema": { events: {} as { type: 'new game' } | { type: 'show rules' } | { type: 'back' } },
   "predictableActionArguments": true,
   "preserveActionOrder": true
 })
